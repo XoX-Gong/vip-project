@@ -20,10 +20,15 @@ import { ref } from "vue";
 import { NInput, NButton, NForm, NFormItem } from "naive-ui";
 import { useId } from './use'
 
+// window.chrome.storage.sync.set({id: '6666'}, function() {
+//   console.log('Value is set to ' + 6666);
+// });
+
+
 const formRef = ref(null);
 
 const formValue = ref({
-  id: localStorage.getItem('id') || '',
+  id:  chrome.storage.sync.get(['id']) || '',
 });
 
 const rules = {
