@@ -1,10 +1,12 @@
 {
   "name": "vip-project",
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview"
+    "build": "vite build && node ../extension/patch.js",
+    "serve": "vite preview",
+    "demo": "node ../extension/patch.js"
   },
   "dependencies": {
     "axios": "^0.23.0",

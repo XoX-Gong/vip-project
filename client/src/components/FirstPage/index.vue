@@ -28,7 +28,7 @@ import { useId } from './use'
 const formRef = ref(null);
 
 const formValue = ref({
-  id:  chrome.storage.sync.get(['id']) || '',
+  id:  localStorage.getItem('id') || '',
 });
 
 const rules = {
