@@ -16,35 +16,9 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
 import { NInput, NButton, NForm, NFormItem } from "naive-ui";
-import { useId } from './use'
+import { useForm } from "./use";
 
-// window.chrome.storage.sync.set({id: '6666'}, function() {
-//   console.log('Value is set to ' + 6666);
-// });
+const { formRef, formValue, rules, handleClick } = useForm();
 
-
-const formRef = ref(null);
-
-const formValue = ref({
-  id:  localStorage.getItem('id') || '',
-});
-
-const rules = {
-  id: {
-    required: true,
-    message: "请输入id",
-    trigger: ["input"],
-  },
-};
-
-const onValidate = async () => {
-  await formRef.value.validate();
-};
-
-const handleClick = async () => {
-  await onValidate();
-  useId(formValue)
-};
 </script>

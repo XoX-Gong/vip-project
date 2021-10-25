@@ -1,13 +1,10 @@
-import Koa from 'koa'
-import router from './router.js'
-import cors from 'koa2-cors'
+import Koa from "koa";
+import router from "./router.js";
+import cors from "koa2-cors";
 
-const app = new Koa
+const app = new Koa();
 
-app.use(router.routes())
-app.use(cors({
-  // credentials: true, 
-  origin: '*',
-}))
+app.use(cors({ credentials: true }));
+app.use(router.routes());
 
-app.listen(4000)
+app.listen(4000);
