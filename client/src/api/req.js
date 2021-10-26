@@ -7,6 +7,9 @@ const r = axios.create({
   timeout: 1000,
 
   withCredentials: true,
+  headers: {
+    'Content-Type': 'application/json'
+  }
 });
 
 // 添加响应拦截器

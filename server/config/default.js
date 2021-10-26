@@ -1,4 +1,4 @@
 export default {
   port: 4000,
-  url: 'mongodb://localhost:27017/vip-project',
+  url: 'mongodb://127.0.0.1/vip-project',
 }
