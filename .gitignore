@@ -5,4 +5,5 @@ dist
 dist-ssr
 *.local
 .vscode
+*/.vscode
 /extension/popup
